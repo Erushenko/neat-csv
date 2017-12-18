@@ -3,7 +3,7 @@ const intoStream = require('into-stream');
 const csvParser = require('csv-parser');
 const getStream = require('get-stream');
 
-module.exports = (input, opts) => {
+module.exports = function (input, opts) {
 	if (typeof input === 'string' || Buffer.isBuffer(input)) {
 		input = intoStream(input);
 	}
